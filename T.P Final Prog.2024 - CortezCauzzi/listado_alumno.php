@@ -26,5 +26,8 @@
             </form>
         </div>
     </section>
+
+    <a href="index.php" class="btn btn-primary" style="position: absolute; top: 10px; left: 10px;">Volver al inicio</a>
+
 </body>
 </html>

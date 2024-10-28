@@ -16,13 +16,14 @@
     ?>
 
     <section id="modificarAlumno">
-        <h2>Modificar los datos de un alumno</h2>
+        <h2>Modificar los datos de un alumno</h2><hr><br>
         <h2>Complete los siguientes campos:</h2>
         <div class="container">
             <form action="ModificarAlumno.php" method="post">
                 <h3>Ingrese el Nro. de Legajo del alumno para modificar sus datos</h3>
-                <input type="text" id="numero_legajo" name="legajo_alumno" placeholder="Numero de Legajo" required>
-                <hr>
+                <input type="text" id="numero_legajo" name="numero_legajo" placeholder="Numero de Legajo" required>
+                <hr><br>
+                <h3>Ingrese los datos a modificar</h3>
                 <input type="text" id="nombre" name="nombre_alumno" placeholder="Nombre" required>
                 <input type="text" id="apellido" name="apellido_alumno" placeholder="Apellido" required>
                 <input type="number" id="dni" name="dni_alumno" placeholder="DNI" required>
@@ -31,5 +32,8 @@
             </form>
         </div>
     </section>
+
+    <a href="index.php" class="btn btn-primary" style="position: absolute; top: 10px; left: 10px;">Volver al inicio</a>
+
 </body>
 </html>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="CSS/eliminar_alumno.css">
 </head>
     <section id="eliminaralumno">
-        <h2>Eliminar un alumno</h2>
+        <h2>Eliminar un alumno</h2><hr><br>
         <h2>Complete los siguientes campos:</h2>
         <div class="container">
             <form action="EliminarAlumno.php" method="post">
@@ -24,5 +24,8 @@
             </form>
         </div>
     </section>
+
+    <a href="index.php" class="btn btn-primary" style="position: absolute; top: 10px; left: 10px;">Volver al inicio</a>
+
 </body>
 </html>

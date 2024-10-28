@@ -42,7 +42,7 @@ class RepoUsuario
             $query->bind_result($id_usuario, $clave_encriptada);
             if ($query->fetch()) {
                 if (password_verify($clave_empleado, $clave_encriptada)) {
-                    return new Usuario($id_usuario, $usuario_empleado, $clave_encriptada);
+                    return new Usuario($usuario_empleado, $clave_encriptada);
                 }
             }
         } else {

@@ -50,11 +50,11 @@ class RepoExamen
         $query->bind_param("ssss", $materia, $fecha, $docente, $alumno_numero_legajo);
         return $query->execute();
     }
-    public function modificarExamen($materia, $nota, $fecha, $alumno_numero_legajo)
+    public function modificarExamen($alumno_numero_legajo, $materia, $fecha, $nota)
     {
         $q = "UPDATE examen SET nota = ? WHERE fecha = ? AND alumno_numero_legajo = ? AND materia = ?";
         $query = self::$conexion->prepare($q);
-        $query->bind_param("siss", $materia, $nota, $fecha, $alumno_numero_legajo);
+        $query->bind_param("isss", $nota, $fecha, $alumno_numero_legajo, $materia);
         return $query->execute();
     } //REVISAR PORQUE NO MODIFICA
 }

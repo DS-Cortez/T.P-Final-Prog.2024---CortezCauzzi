@@ -21,4 +21,3 @@ if (!$conexion) {
     die('No se pudo conectar: ' . mysqli_connect_error());
 }
 
-/*echo 'Conexion exitosa';*/

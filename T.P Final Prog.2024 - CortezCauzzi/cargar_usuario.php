@@ -17,7 +17,7 @@
         ?>
 
     <section id="nuevousuario">
-            <h2>Crear un nuevo usuario</h2>
+            <h2>Crear un nuevo usuario</h2><hr><br>
             <h2>Complete los siguientes campos:</h2>
             <div class="container">
                 <form action="crear_usuario.php" method="post">

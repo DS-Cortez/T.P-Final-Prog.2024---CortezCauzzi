@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="CSS/cargar_alumno.css">
 </head>
     <section id="nuevoalumno">
-        <h2>Ingresar un nuevo alumno</h2>
+        <h2>Ingresar un nuevo alumno</h2><hr><br>
         <h2>Complete los siguientes campos:</h2>
         <div class="container">
             <form action="crear_alumno.php" method="post">
@@ -28,5 +28,8 @@
             </form>
         </div>
     </section>
+
+    <a href="index.php" class="btn btn-primary" style="position: absolute; top: 10px; left: 10px;">Volver al inicio</a>
+
 </body>
 </html>

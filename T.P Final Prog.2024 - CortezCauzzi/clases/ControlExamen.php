@@ -22,9 +22,9 @@ class ControlExamen
         return $repo->eliminarExamen($materia, $fecha, $docente, $alumno_numero_legajo);
     }
 
-    public function modificarExamen($materia, $nota, $fecha, $alumno_numero_legajo)
+    public function modificarExamen($alumno_numero_legajo, $materia, $fecha, $nota)
     {
         $repo = new RepoExamen();
-        return $repo->modificarExamen($materia, $nota, $fecha, $alumno_numero_legajo);
+        return $repo->modificarExamen($alumno_numero_legajo, $materia, $fecha, $nota);
     }
 }

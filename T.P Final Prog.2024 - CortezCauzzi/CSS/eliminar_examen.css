@@ -63,3 +63,8 @@ button:hover {
     border: 1px solid #084298;
     border-radius: 5px;
 }
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}

@@ -33,11 +33,11 @@ class RepoAlumno
         return $query->execute();
     }
 
-    public function obtenerAlumno($dni, $numero_legajo)
+    public function obtenerAlumno($numero_legajo)
     {
-        $q = "SELECT * FROM alumno WHERE dni =? AND numero_legajo = ?";
+        $q = "SELECT * FROM alumno WHERE numero_legajo = ?";
         $query = self::$conexion->prepare($q);
-        $query->bind_param("ss", $dni, $numero_legajo); /*duda sobre el tipo de balor*/
+        $query->bind_param("s", $numero_legajo); 
         $query->execute();
         return $query->get_result()->fetch_assoc();
     }
@@ -50,60 +50,12 @@ class RepoAlumno
         return $query->execute();
     }
 
-    /*public function modificarAlumno($nombre, $apellido, $email, $dni, $numero_legajo)
+
+    public function modificarAlumno($numero_legajo, $nombre, $apellido, $dni, $email)
     {
-        $q = "UPDATE alumno SET nombre = ?, apellido = ?, email = ?, dni = ?";
-        $q.= "WHERE id_alumno = ?;";
-        $query = self::$conexion->prepare($q);
-
-        $id = $alumno>getId();
-
-
-        $query = self::$conexion->prepare($q);
-        $query->bind_param("sssss", $nombre, $apellido, $email, $dni, $numero_legajo);
-        return $query->execute();
-    }
-
-    public function modificarAlumno($nombre, $apellido, $email, $dni, $numero_legajo)
-{
-    $q = "UPDATE alumno SET nombre = ?, apellido = ?, email = ? ,dni = ? AND numero_legajo = ?";
-    $query = self::$conexion->prepare($q);
-    
-    if (!$query) {
-        error_log("Error en la preparación de la consulta: " . self::$conexion->error);
-        return false;
-    }
-
-    $query->bind_param("sssss", $nombre, $apellido, $email, $dni, $numero_legajo);
-    
-    if (!$query->execute()) {
-        error_log("Error al ejecutar la consulta: " . $query->error);
-        return false;
-    }
-
-    return true;
-}*/
-
-/*public function modificarAlumno($nombre, $apellido, $dni, $numero_legajo, $email)
-    {
-        $q = "UPDATE alumno SET nombre = ?, apellido = ?, email = ?, dni = ? WHERE numero_legajo = ? ";
-        $query = self::$conexion->prepare($q);
-        $query->bind_param("sssss", $nombre, $apellido, $email, $dni, $numero_legajo);
-        return $query->execute();
-    }*/
-
-    public function modificarAlumno($nombre, $apellido, $dni, $numero_legajo, $email)
-    {
-        // Consulta SQL con placeholders
         $q = "UPDATE alumno SET nombre = ?, apellido = ?, email = ?, dni = ? WHERE numero_legajo = ?";
-        
-        // Preparar la consulta
         $query = self::$conexion->prepare($q);
-        
-        // Todos los parámetros son cadenas de texto (VARCHAR), así que usamos "sssss"
         $query->bind_param("sssss", $nombre, $apellido, $email, $dni, $numero_legajo);
-        
-        // Ejecutar la consulta
         return $query->execute();
     }
 
